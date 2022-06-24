@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew_path=$(brew --prefix)
+brew_path=/opt/homebrew
 
 # Add `Homebrew` binaries to the PATH
 export PATH="$brew_path/bin:$PATH"

@@ -30,18 +30,11 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:ls:history:date:* --help:jrnl * -h:pony:p
 export HISTFILE=$HOME/.zsh_history
 
 # Make Vim the default editor
-EDITOR=$(brew --prefix)/bin/micro
+EDITOR=/opt/homebrew/bin/micro
 export EDITOR
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X'
-
-# Ensure user-installed binaries take precedence
-LIBCURL_CFLAGS=-L$(brew --prefix)/opt/curl/lib
-export LIBCURL_CFLAGS
-
-LIBCURL_LIBS=-I$(brew --prefix)/opt/curl/include
-export LIBCURL_LIBS
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656

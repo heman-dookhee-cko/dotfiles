@@ -5,7 +5,7 @@ PATH  := bin:$(PATH)
 
 .PHONY: bin
 bin: ## Install binaries from the .bin directory to /usr/local/bin
-	@for file in $(shell find $(CURDIR)/.bin -type f -not -name ".*.swp"); do \
+	@for file in $(shell find $(CURDIR)/bin -type f -not -name ".*.swp"); do \
 		f=$$(basename $$file); \
 		sudo ln -sf $$file /usr/local/bin/$$f; \
 	done
